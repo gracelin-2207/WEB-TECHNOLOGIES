@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="users_style.xsl"?>
+
+<quiz>
+    <item>
+        <id>1</id>
+        <title>Ethereal Portraits</title>
+        <description>Soft light and dreamy tones capturing emotion through minimal color grading.</description>
+        <camera>Canon EOS R5</camera>
+        <lens>RF 50mm f/1.2L</lens>
+        <location>Chennai Studio</location>
+    </item>
+    <item>
+        <id>2</id>
+        <title>Urban Reflections</title>
+        <description>Night cityscapes blending neon lights with glass reflections.</description>
+        <camera>Sony A7 IV</camera>
+        <lens>FE 24-70mm f/2.8 GM</lens>
+        <location>Downtown Bangalore</location>
+    </item>
+    <item>
+        <id>3</id>
+        <title>Golden Hour Waves</title>
+        <description>Beach photography emphasizing warm sunset hues and motion blur aesthetics.</description>
+        <camera>Nikon Z7 II</camera>
+        <lens>Z 70-200mm f/2.8 S</lens>
+        <location>Marina Beach</location>
+    </item>
+    <item>
+        <id>4</id>
+        <title>Studio Silhouettes</title>
+        <description>Backlit silhouettes emphasizing shadows and shape-based storytelling.</description>
+        <camera>Canon EOS R6</camera>
+        <lens>RF 85mm f/1.4L</lens>
+        <location>Momentology Studio HQ</location>
+    </item>
+    <item>
+        <id>5</id>
+        <title>Monochrome Moments</title>
+        <description>Black &amp; white portraiture exploring mood, texture, and tone.</description>
+        <camera>Fujifilm X100V</camera>
+        <lens>Fixed 23mm f/2</lens>
+        <location>Kochi Street</location>
+    </item>
+</quiz>
