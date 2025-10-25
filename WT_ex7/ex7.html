@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <title>Momentology – Save Your Brand Style</title>
+    <style>
+      /* Background with gradient */
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #1a1a1a, #333333, #111111);
+        color: #f1f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      /* Form container */
+      .form-box {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        width: 400px;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      /* Heading */
+      .form-box h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        color: #ffd369;
+        letter-spacing: 1px;
+      }
+
+      /* Input field */
+      input[type="text"] {
+        width: 90%;
+        padding: 12px;
+        margin-bottom: 20px;
+        border: none;
+        border-radius: 10px;
+        outline: none;
+        font-size: 1rem;
+        background: #2c2c2c;
+        color: #f1f1f1;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      input[type="text"]:focus {
+        background: #444;
+        transform: scale(1.05);
+      }
+
+      /* Button */
+      input[type="submit"] {
+        background: linear-gradient(135deg, #ff4e50, #f9d423);
+        border: none;
+        padding: 12px 20px;
+        border-radius: 10px;
+        font-size: 1rem;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+      input[type="submit"]:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      /* Branding text at bottom */
+      .footer {
+        margin-top: 20px;
+        font-size: 0.85rem;
+        color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-box">
+      <h2>🎨 Enter Your Branding Style</h2>
+      <form name="brandingForm" method="POST" action="http://localhost:8080/WT_4034/SP5">
+        <input type="text" name="style" placeholder="e.g., Minimalist, Bold, Vintage" /><br/>
+        <input type="submit" value="Save My Style"/>
+      </form>
+      <div class="footer">✨ Momentology – Photography & Visual Branding ✨</div>
+    </div>
+  </body>
+</html>
+
