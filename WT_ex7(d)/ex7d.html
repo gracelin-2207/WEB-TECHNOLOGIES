@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Momentology — Creative Login</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fce4ec, #f8bbd0);
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #333;
+      position: relative;
+    }
+
+    /* Floating emoji background */
+    .emoji {
+      position: absolute;
+      font-size: 2rem;
+      opacity: 0.15;
+      animation: float 12s infinite ease-in-out;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-30px) rotate(10deg); }
+      100% { transform: translateY(0) rotate(-10deg); }
+    }
+
+    .login-box {
+      background: rgba(255, 255, 255, 0.4);
+      border: 2px solid #f48fb1;
+      border-radius: 25px;
+      padding: 45px 60px;
+      text-align: center;
+      box-shadow: 0 0 30px rgba(244,143,177,0.5);
+      backdrop-filter: blur(10px);
+      transition: transform 0.4s ease;
+      z-index: 2;
+    }
+    .login-box:hover {
+      transform: scale(1.05);
+    }
+
+    h1 {
+      color: #d81b60;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #6a1b9a;
+      margin-bottom: 30px;
+      font-size: 15px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      outline: none;
+    }
+    input[type="text"], input[type="password"] {
+      background-color: rgba(255,255,255,0.9);
+      color: #444;
+    }
+    input[type="submit"] {
+      background-color: #f48fb1;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: none;
+    }
+    input[type="submit"]:hover {
+      background-color: #f06292;
+      color: white;
+    }
+
+    footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 13px;
+      color: #7b1fa2;
+    }
+
+    .flash {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: white;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      z-index: 3;
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating emojis -->
+  <div class="emoji" style="top:10%; left:15%;">📸</div>
+  <div class="emoji" style="top:40%; left:5%;">💫</div>
+  <div class="emoji" style="top:70%; left:75%;">🌷</div>
+  <div class="emoji" style="top:20%; left:80%;">✨</div>
+  <div class="emoji" style="top:85%; left:30%;">🎞️</div>
+
+  <div class="login-box">
+    <h1>Momentology</h1>
+    <p>Capture. Create. Connect.</p>
+    <form id="loginForm" action="http://localhost:8080/WT_4034/SP7">
+      <input type="text" name="userName" placeholder="Enter your name" required /><br/>
+      <input type="password" name="userPassword" placeholder="Enter your password" required /><br/>
+      <input type="submit" value="Enter Studio" />
+    </form>
+  </div>
+
+  <div class="flash" id="flash"></div>
+
+  <footer>© 2025 Momentology | Where Brands Shine ✨</footer>
+
+  <script>
+    const form = document.getElementById("loginForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const flash = document.getElementById("flash");
+      flash.style.opacity = 1;
+      setTimeout(() => form.submit(), 400);
+    });
+  </script>
+</body>
+</html>
+
