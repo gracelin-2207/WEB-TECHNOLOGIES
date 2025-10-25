@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Licensed to the Apache Software Foundation (ASF) under one or more
+  contributor license agreements.  See the NOTICE file distributed with
+  this work for additional information regarding copyright ownership.
+  The ASF licenses this file to You under the Apache License, Version 2.0
+  (the "License"); you may not use this file except in compliance with
+  the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<web-app>
+
+    <!-- Define servlets that are included in the example application -->
+
+    <servlet>
+      <servlet-name>FirstServlet</servlet-name>
+      <servlet-class>clsprg1</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>FirstServlet</servlet-name>
+        <url-pattern>/ServletProg1</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+    <servlet-name>MomentologyCounter</servlet-name>
+    <servlet-class>p8a</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+      <servlet-name>MomentologyCounter</servlet-name>
+      <url-pattern>/MomentologyCounter</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>MomentTracker</servlet-name>
+    <servlet-class>p8b</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+      <servlet-name>MomentTracker</servlet-name>
+      <url-pattern>/MomentTracker</url-pattern>
+  </servlet-mapping>
+
+     <servlet>
+      <servlet-name>FirstServlet</servlet-name>
+      <servlet-class>clsprg2</servlet-class>
+    </servlet>
+     <servlet>
+      <servlet-name>EightServlet</servlet-name>
+      <servlet-class>SProg8</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>EightServlet</servlet-name>
+        <url-pattern>/SP8</url-pattern>
+    </servlet-mapping>
+    <servlet>
+      <servlet-name>SevenServlet</servlet-name>
+      <servlet-class>SProg7</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>SevenServlet</servlet-name>
+        <url-pattern>/SP7</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>FirstServlet</servlet-name>
+        <url-pattern>/ServletProg2</url-pattern>
+    </servlet-mapping>
+     <servlet>
+      <servlet-name>FiveServlet</servlet-name>
+      <servlet-class>SProg5</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>FiveServlet</servlet-name>
+        <url-pattern>/SP5</url-pattern>
+    </servlet-mapping>
+     <servlet>
+      <servlet-name>SixServlet</servlet-name>
+      <servlet-class>SProg6</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>SixServlet</servlet-name>
+        <url-pattern>/SP6</url-pattern>
+    </servlet-mapping>
+   
+    <servlet>
+      <servlet-name>ElevenServlet</servlet-name>
+      <servlet-class>SProg11</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>ElevenServlet</servlet-name>
+        <url-pattern>/SP11</url-pattern>
+    </servlet-mapping>
+    <servlet>
+      <servlet-name>TwelveServlet</servlet-name>
+      <servlet-class>SProg12</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>TwelveServlet</servlet-name>
+        <url-pattern>/SP12</url-pattern>
+    </servlet-mapping>
+
+     <servlet>
+      <servlet-name>NineServlet</servlet-name>
+      <servlet-class>SProg9</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>NineServlet</servlet-name>
+        <url-pattern>/SP9</url-pattern>
+    </servlet-mapping>
+      
+     <servlet>
+      <servlet-name>TenServlet</servlet-name>
+      <servlet-class>SProg10</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>TenServlet</servlet-name>
+        <url-pattern>/SP10</url-pattern>
+    </servlet-mapping>
+    
+   
+    <servlet>
+      <servlet-name>Firstdb</servlet-name>
+      <servlet-class>p12_db1</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Firstdb</servlet-name>
+        <url-pattern>/Firstdb</url-pattern>
+    </servlet-mapping>
+      <servlet>
+      <servlet-name>Seconddb</servlet-name>
+      <servlet-class>p12_db2</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Seconddb</servlet-name>
+        <url-pattern>/Seconddb</url-pattern>
+    </servlet-mapping>
+      <servlet>
+      <servlet-name>Thirddb</servlet-name>
+      <servlet-class>p12_db3</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>Thirddb</servlet-name>
+        <url-pattern>/Thirddb</url-pattern>
+    </servlet-mapping>   
+     
+    <error-page>
+        <error-code>403</error-code>
+        <location>/WEB-INF/jsp/403.jsp</location>
+    </error-page>
+
+</web-app>
