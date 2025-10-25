@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photography Mood Board</title>
+  <link rel="stylesheet" href="moodboard.css">
+</head>
+<body>
+
+  <header>
+    <h1>🎨 Photography Mood Board</h1>
+    <p>Click a mood to explore visual inspiration + pro tips</p>
+  </header>
+
+  <!-- Hidden Radio Controls -->
+  <input type="radio" name="filter" id="filter-all" class="filter-control" checked>
+  <input type="radio" name="filter" id="filter-nature" class="filter-control">
+  <input type="radio" name="filter" id="filter-urban" class="filter-control">
+  <input type="radio" name="filter" id="filter-portrait" class="filter-control">
+  <input type="radio" name="filter" id="filter-night" class="filter-control">
+
+  <div class="container">
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+      <label for="filter-all">All</label>
+      <label for="filter-nature">🌿 Nature</label>
+      <label for="filter-urban">🏙️ Urban</label>
+      <label for="filter-portrait">🧑 Portrait</label>
+      <label for="filter-night">🌌 Night</label>
+    </div>
+
+    <!-- Photo Grid -->
+    <section class="photo-grid">
+      <div class="photo-card nature">
+        <img src="https://picsum.photos/id/1018/400/300" alt="Nature">
+      </div>
+      <div class="photo-card urban">
+        <img src="https://picsum.photos/id/1011/400/300" alt="Urban">
+      </div>
+      <div class="photo-card portrait">
+        <img src="https://picsum.photos/id/1005/400/300" alt="Portrait">
+      </div>
+      <div class="photo-card night">
+        <img src="https://picsum.photos/id/1019/400/300" alt="Night">
+      </div>
+      <div class="photo-card nature">
+        <img src="https://picsum.photos/id/1020/400/300" alt="Nature">
+      </div>
+      <div class="photo-card urban">
+        <img src="https://picsum.photos/id/1023/400/300" alt="Urban">
+      </div>
+      <div class="photo-card portrait">
+        <img src="https://picsum.photos/id/1027/400/300" alt="Portrait">
+      </div>
+      <div class="photo-card night">
+        <img src="https://picsum.photos/id/1022/400/300" alt="Night">
+      </div>
+    </section>
+
+    <!-- Info Boxes for each category -->
+    <section class="info-box info-nature">
+      <h2>🌿 Nature Photography</h2>
+      <p><strong>📍 Best Locations:</strong> Forests, mountains, riversides, gardens</p>
+      <p><strong>☀️ Best Lighting Time:</strong> Golden hour (sunrise or sunset)</p>
+    </section>
+
+    <section class="info-box info-urban">
+      <h2>🏙️ Urban Photography</h2>
+      <p><strong>📍 Best Locations:</strong> City streets, architecture, cafes, rooftops</p>
+      <p><strong>☀️ Best Lighting Time:</strong> Blue hour (just after sunset) or mid-morning</p>
+    </section>
+
+    <section class="info-box info-portrait">
+      <h2>🧑 Portrait Photography</h2>
+      <p><strong>📍 Best Locations:</strong> Studios, natural window light, outdoor parks</p>
+      <p><strong>☀️ Best Lighting Time:</strong> Soft daylight or cloudy weather for even tones</p>
+    </section>
+
+    <section class="info-box info-night">
+      <h2>🌌 Night Photography</h2>
+      <p><strong>📍 Best Locations:</strong> City skylines, starry skies, neon-lit streets</p>
+      <p><strong>☀️ Best Lighting Time:</strong> After sunset with long exposure</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>✨ "Photography is the art of frozen time." ✨</p>
+  </footer>
+
+</body>
+</html>
