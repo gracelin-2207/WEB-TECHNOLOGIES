@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Momentology Studio | DOM Example</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0a0a0a, #1a1a1a, #111111);
+      color: #ffffff;
+      overflow: hidden;
+      background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1600&q=80');
+
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      background: linear-gradient(90deg, #ff007f, #ffd200, #00e1ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 3s infinite alternate;
+      text-align: center;
+      margin-bottom: 30px;
+      letter-spacing: 2px;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #ff007f; }
+      100% { text-shadow: 0 0 30px #00e1ff; }
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(10px);
+      padding: 30px 50px;
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.1);
+      text-align: left;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    b {
+      color: #ffd200;
+    }
+
+    span {
+      color: #fff;
+      font-weight: 500;
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+      animation: textGlow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes textGlow {
+      0% { text-shadow: 0 0 5px #ff007f; }
+      100% { text-shadow: 0 0 20px #00e1ff; }
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 10px;
+      font-size: 0.9rem;
+      color: #aaa;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>📸 Momentology Studio </h1>
+
+  <div class="card">
+    <p><b>Name:</b> <span id="name"></span></p>
+    <p><b>Company:</b> <span id="company"></span></p>
+    <p><b>Phone:</b> <span id="phone"></span></p>
+  </div>
+
+  <div class="footer">© 2025 Momentology Studio | Crafted with ✨ Creativity</div>
+
+  <script>
+    let xmlhttp;
+    if (window.XMLHttpRequest) {
+      xmlhttp = new XMLHttpRequest();
+    } else {
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    }
+    xmlhttp.open("GET", "prog5.xml", false);
+    xmlhttp.send();
+    const xmlDoc = xmlhttp.responseXML;
+
+    document.getElementById("name").innerHTML =
+      xmlDoc.getElementsByTagName("name")[0].childNodes[0].nodeValue;
+    document.getElementById("company").innerHTML =
+      xmlDoc.getElementsByTagName("company")[0].childNodes[0].nodeValue;
+    document.getElementById("phone").innerHTML =
+      xmlDoc.getElementsByTagName("phone")[0].childNodes[0].nodeValue;
+  </script>
+
+</body>
+</html>
