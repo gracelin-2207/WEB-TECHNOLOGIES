@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📸 Momentology Studio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      color: #333;
+      background: #000;
+    }
+
+    /* Background slideshow container */
+    .bg {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      transition: opacity 1.8s ease-in-out;
+      z-index: 0;
+      opacity: 0;
+    }
+    .bg.active { opacity: 1; }
+
+    /* Glass container */
+    .container {
+      position: relative;
+      z-index: 2;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 25px;
+      padding: 60px 70px;
+      text-align: center;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(8px);
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    h1 {
+      font-size: 2.4em;
+      color: #0072ff;
+      font-weight: 600;
+      margin-bottom: 10px;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    }
+
+    .subtitle {
+      color: #222;
+      font-style: italic;
+      margin-bottom: 30px;
+      font-size: 1.1em;
+    }
+
+    input[type="text"] {
+      width: 80%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      background: rgba(255, 255, 255, 0.9);
+      font-size: 1em;
+      color: #333;
+      outline: none;
+      text-align: center;
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
+
+    input[type="text"]:focus {
+      box-shadow: 0 0 15px rgba(0, 114, 255, 0.6);
+      transform: scale(1.03);
+    }
+
+    input[type="submit"] {
+      padding: 14px 40px;
+      border: none;
+      border-radius: 25px;
+      font-weight: bold;
+      background: linear-gradient(135deg, #0072ff, #00c6ff);
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 1em;
+      box-shadow: 0 5px 20px rgba(0, 114, 255, 0.4);
+    }
+
+    input[type="submit"]:hover {
+      transform: scale(1.07);
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+    }
+
+    /* Floating icons */
+    .float {
+      position: absolute;
+      font-size: 2em;
+      animation: float 6s ease-in-out infinite;
+      opacity: 0.9;
+    }
+    .icon1 { top: 30px; left: 40px; animation-delay: 0s; }
+    .icon2 { top: 50%; right: 60px; animation-delay: 2s; }
+    .icon3 { bottom: 30px; left: 60px; animation-delay: 4s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    /* Flash sparkle effect */
+    .flash {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.8) 10%, transparent 70%);
+      animation: flash 5s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .flash1 { top: 20%; left: 20%; animation-delay: 1s; }
+    .flash2 { bottom: 25%; right: 30%; animation-delay: 3s; }
+
+    @keyframes flash {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Backgrounds (Slideshow) -->
+  <div class="bg active" style="background-image: url('https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=1600&q=80');"></div>
+  <div class="bg" style="background-image: url('https://images.unsplash.com/photo-1508675801603-4f3e0d6e6b63?auto=format&fit=crop&w=1600&q=80');"></div>
+  <div class="bg" style="background-image: url('https://images.unsplash.com/photo-1519183071298-a2962be90b8e?auto=format&fit=crop&w=1600&q=80');"></div>
+
+  <div class="flash flash1"></div>
+  <div class="flash flash2"></div>
+
+  <div class="float icon1">📷</div>
+  <div class="float icon2">🎨</div>
+  <div class="float icon3">💡</div>
+
+  <div class="container">
+    <h1>Welcome to Momentology</h1>
+    <p class="subtitle">Capture creativity. Build your story. Inspire through moments.</p>
+
+    <form action="http://localhost:8080/WT_4034/MomentTracker" method="GET">
+      <input type="text" name="userName" placeholder="Enter your name..." required>
+      <br>
+      <input type="submit" value="Enter Studio 🎞️">
+    </form>
+  </div>
+
+  <script>
+    const bgs = document.querySelectorAll('.bg');
+    let current = 0;
+
+    setInterval(() => {
+      bgs[current].classList.remove('active');
+      current = (current + 1) % bgs.length;
+      bgs[current].classList.add('active');
+    }, 7000); // change every 7 seconds
+  </script>
+
+</body>
+</html>
