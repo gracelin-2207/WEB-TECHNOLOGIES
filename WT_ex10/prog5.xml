@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+  ✨ Momentology Studio ✨
+  Creative XML Data Source for DOM Example
+  Theme: Photography | Branding | Motion Art
+  Mood: Gradient, Neon Glow, Cinematic Warmth
+-->
+
+<contact-info theme="momentology" color-scheme="neon-dark">
+    <!-- Basic Photographer Info -->
+    <name style="color:#00e1ff; glow:#ff007f;">Gracelin A.</name>
+    <company style="color:#ffd200; font-weight:bold;">
+        Momentology Studio | Photography &amp; Branding
+    </company>
+    <phone style="color:#ffffff;">+91-98765-43210</phone>
+
+    <!-- Extra Fields for Creative Expansion -->
+    <socials>
+        <instagram>@momentology_studio</instagram>
+        <website>https://momentology.studio</website>
+        <email>hello@momentology.studio</email>
+    </socials>
+
+    <quote>
+        "Capturing emotions through light, color, and time."
+    </quote>
+</contact-info>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="prog6.xsl"?>
+
+<!-- 
+  ✨ Momentology Studio ✨
+  Team Roster XML - For Creative Transformation via prog6.xsl
+  Domain: Photography | Branding | Motion Design
+  Theme: Neon Glow, Cinematic Depth
+-->
+
+<studio>
+    <team-member id="M001">
+        <firstname>Gracelin</firstname>
+        <lastname>Adline</lastname>
+        <role>Creative Director</role>
+        <nickname>Grace</nickname>
+        <speciality>Brand Design &amp; Visual Identity</speciality>
+        <salary>65000</salary>
+    </team-member>
+
+    <team-member id="M002">
+        <firstname>Rithvik</firstname>
+        <lastname>Kumar</lastname>
+        <role>Lead Photographer</role>
+        <nickname>LensPro</nickname>
+        <speciality>Portrait &amp; Cinematic Shoots</speciality>
+        <salary>50000</salary>
+    </team-member>
+
+    <team-member id="M003">
+        <firstname>Neha</firstname>
+        <lastname>Menon</lastname>
+        <role>Editor &amp; Retoucher</role>
+        <nickname>Pixie</nickname>
+        <speciality>Color Grading &amp; Motion Edits</speciality>
+        <salary>42000</salary>
+    </team-member>
+
+    <team-member id="M004">
+        <firstname>Arjun</firstname>
+        <lastname>Das</lastname>
+        <role>Marketing Strategist</role>
+        <nickname>BrandGuru</nickname>
+        <speciality>Social Media &amp; Campaign Design</speciality>
+        <salary>47000</salary>
+    </team-member>
+
+    <!-- Optional: Inspirational Footer Data -->
+    <quote>"Moments fade, but art stays timeless."</quote>
+</studio>
