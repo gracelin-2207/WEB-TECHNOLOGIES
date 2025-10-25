@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Momentology | Capture Your Story 📸</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+      body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(-45deg, #ffb400, #ff6b6b, #6b5bff, #1c1c1c);
+        background-size: 400% 400%;
+        animation: gradientShift 8s ease infinite;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+
+      h1 {
+        font-size: 2.5em;
+        color: #fff8e1;
+        margin-bottom: 10px;
+        text-shadow: 0 0 20px rgba(255,255,255,0.8);
+        animation: glowText 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes glowText {
+        from { text-shadow: 0 0 10px #ffb400; }
+        to { text-shadow: 0 0 30px #ffe873; }
+      }
+
+      form {
+        background: rgba(255, 255, 255, 0.15);
+        padding: 30px 50px;
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(255,255,255,0.2);
+        text-align: center;
+        backdrop-filter: blur(10px);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+
+      form:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 50px rgba(255,255,255,0.4);
+      }
+
+      input[type=text] {
+        padding: 12px;
+        border: none;
+        border-radius: 8px;
+        margin-top: 15px;
+        width: 250px;
+        font-size: 1em;
+        text-align: center;
+      }
+
+      input[type=submit] {
+        background-color: #fff8e1;
+        color: #1c1c1c;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 10px;
+        margin-top: 20px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      input[type=submit]:hover {
+        background-color: #fff176;
+        transform: scale(1.05);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to Momentology 📸</h1>
+    <p>Enter your name to begin your creative journey ✨</p>
+    <form action="http://localhost:8080/WT_4034/SP9" method="GET" accept-charset="UTF-8">
+      <input type="text" name="userName" placeholder="Enter your name" required /><br/>
+      <input type="submit" value="Start My Session 🚀" />
+    </form>
+  </body>
+</html>
