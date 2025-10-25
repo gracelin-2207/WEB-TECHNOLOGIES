@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Momentology Studio | Portfolio Database</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.6);
+            min-height: 100vh;
+            padding: 50px 10%;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+            color: #ffeb3b;
+            text-shadow: 0 0 10px #ffeb3b;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ffeb3b, transparent);
+            margin: 20px 0;
+        }
+
+        h3, h2 {
+            color: #ffcc80;
+            margin-top: 20px;
+        }
+
+        form, a {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input[type="text"], select {
+            padding: 10px;
+            width: 250px;
+            border-radius: 8px;
+            border: none;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #ffeb3b;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 8px;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ffc107;
+            transform: scale(1.05);
+        }
+
+        a {
+            color: #fff176;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        label, p {
+            color: #fff;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay">
+        <h1>📸 Momentology Studio Database</h1>
+        <hr>
+
+        <div class="section">
+            <h3>📂 View Complete Portfolio</h3>
+            <a href="http://localhost:8080/WT_4034/Firstdb">Display all portfolio entries</a>
+        </div>
+
+        <hr>
+
+        <div class="section">
+            <h3>🎨 View Category-Specific Projects</h3>
+            <form action="http://localhost:8080/WT_4034/Seconddb">
+                <label for="category">Select Category:</label><br>
+                <select id="category" name="category">
+                    <option value="">--</option>
+                    <option value="Portrait">Portrait</option>
+                    <option value="Wedding">Wedding</option>
+                    <option value="Branding">Branding</option>
+                    <option value="Product">Product</option>
+                </select>
+                <br><br>
+                <input type="submit" value="🎞️ View Projects"/>
+            </form>
+        </div>
+
+        <hr>
+
+        <div class="section">
+            <h2>🏷️ Insert New Brand Info</h2>
+            <form action="http://localhost:8080/WT_4034/Thirddb" method="post">
+                <p>Brand ID:</p>
+                <input type="text" name="brandid" required>
+                <p>Brand Name:</p>
+                <input type="text" name="brandname" required>
+                <p>Projects Handled:</p>
+                <input type="text" name="projects" required>
+                <br><br>
+                <input type="submit" value="✨ Insert Brand"/>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
