@@ -1,0 +1,79 @@
+<html>
+  <head>
+    <title>Momentology – Retrieve Style</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #0f0f0f, #1a1a1a, #2c2c2c);
+        color: #f1f1f1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        padding: 40px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+        width: 450px;
+        animation: slideUp 1s ease-in-out;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        color: #ffb347;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+      }
+
+      p {
+        font-size: 1rem;
+        margin: 10px 0;
+        color: #ddd;
+      }
+
+      .btn {
+        margin-top: 20px;
+        background: linear-gradient(135deg, #ff416c, #ff4b2b);
+        border: none;
+        padding: 12px 22px;
+        border-radius: 10px;
+        font-size: 1rem;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      }
+
+      .btn:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+      }
+
+      @keyframes slideUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .footer {
+        margin-top: 20px;
+        font-size: 0.85rem;
+        color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>📷 Retrieve Your Branding Style</h2>
+      <p>Click the button below to load your saved photography & branding preference.</p>
+      <button class="btn" onclick="window.open('http://localhost:8080/WT_4034/SP6')">Show My Style</button>
+      <div class="footer">✨ Momentology – Personalized Visual Branding ✨</div>
+    </div>
+  </body>
+</html>
