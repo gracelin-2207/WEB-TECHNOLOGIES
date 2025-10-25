@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momentology</title>
+
+  <!-- Internal CSS for homepage only -->
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #f9e2e7, #e2f1f9, #eaf9e2); /* pastel shades */
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      color: #333;
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #2c3e50;
+    }
+    p {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      color: #555;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+    }
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .btn-link {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.6);
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 12px;
+      font-weight: bold;
+      border-radius: 0 0 15px 15px;
+      transition: background 0.3s;
+    }
+    .btn-link:hover {
+      background: rgba(0, 0, 0, 0.8);
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #444;
+      font-size: 1rem;
+      font-weight: 500;
+      background: rgba(255,255,255,0.5);
+      margin-top: 50px;
+      border-top: 2px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>💡 Welcome to the Photography Lighting Guide</h1>
+    <p>Discover the styles, enhancement and learnings of the Photography</p>
+  </header>
+
+  <!-- Image Gallery Navigation -->
+  <section class="gallery">
+    <!-- External CSS -->
+    <div class="card">
+      <img src="https://picsum.photos/id/1018/600/400" alt="External CSS Page">
+      <a href="ex3external.html" class="btn-link">Mood Board</a>
+    </div>
+
+    <!-- Internal CSS -->
+    <div class="card">
+      <img src="https://picsum.photos/id/1025/600/400" alt="Internal CSS Page">
+      <a href="ex3internal.html" class="btn-link">Photography Styles</a>
+    </div>
+
+    <!-- Inline CSS -->
+    <div class="card">
+      <img src="https://picsum.photos/id/1015/600/400" alt="Inline CSS Page">
+      <a href="ex3inline.html" class="btn-link">Photography Lightings</a>
+    </div>
+  </section>
+
+  <footer>
+    ✨ We’re glad to have you here – Explore and enjoy your learning journey!
+  </footer>
+
+</body>
+</html>
